@@ -4,7 +4,7 @@
 #include "Matrix.hpp"
 #include "PlotQuiver.h"
 #include "EdgeNode.cpp"
-#include "liebmann.cpp"
+#include "Liebmann.cpp"
 #include "InterfazUsuario.cpp"
 using namespace anpi;
 

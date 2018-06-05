@@ -11,7 +11,7 @@ find_package (Boost COMPONENTS program_options REQUIRED)
 
 include_directories( ${Boost_INCLUDE_DIR} )
 include_directories("src/utilidades" )
-include_directories("src/Process" )
+include_directories("src/proceso" )
 include_directories("src/gui" )
 
 set(CMAKE_C_COMPILER "/usr/local/Cellar/llvm/6.0.0/bin/clang")

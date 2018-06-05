@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
                       vm); // can throw
 
             if (vm.count("help")) {
-                std::cout << "<< ANPI Proyecto 3 - Propagacion de calor >>" << std::endl
+                std::cout << "<< ANPI Proyecto 3 - Propagacion de calor - EMD >>" << std::endl
                           << desc << std::endl;
                 return SUCCESS;
             } else if (vm.count("-t") && vm.count("-b") && vm.count("-l") && vm.count("-d") && vm.count("-h") &&

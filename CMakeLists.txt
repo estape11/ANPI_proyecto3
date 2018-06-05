@@ -4,8 +4,8 @@ project(ANPI_proyecto3 VERSION 0.0.0 LANGUAGES CXX)
 
 set (CMAKE_CXX_STANDARD 11)
 
-#set(PLOTSOURCES src/main.cpp src/test.cpp)
-set(PLOTSOURCES src/test.cpp)
+set(PLOTSOURCES src/main.cpp)
+#set(PLOTSOURCES src/test.cpp)
 
 find_package (Boost COMPONENTS program_options REQUIRED)
 

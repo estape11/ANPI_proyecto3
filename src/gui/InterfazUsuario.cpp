@@ -9,7 +9,6 @@ InterfazUsuario::InterfazUsuario() {
 }
 
 void InterfazUsuario::init() {
-
         int option(0);
         while(true){
             int rows(0);
@@ -25,17 +24,18 @@ void InterfazUsuario::init() {
 }
 void InterfazUsuario::setUpMat(int rows, int cols) {
     Matrix<double> mat(rows,cols);
-    liebmann<double> lieb(1.5,
+    Liebmann<double> lieb(1.5,
                           getEdge("Top"),
                           getEdge("Down"),
                           getEdge("Rigth"),
                           getEdge("Left"));
     Matrix<double> a;
     a= lieb.generateMat(mat);
+    lieb.printMyMat(a);
     calcMat(a,lieb);
 }
 
-edgeNode<double> InterfazUsuario::getEdge(string edge) {
+EdgeNode<double> InterfazUsuario::getEdge(string edge) {
     double max(0);
     double min(0);
     cout<<"To use isolated Edges, you must enter max=0 and min=0"<<endl;
@@ -43,11 +43,11 @@ edgeNode<double> InterfazUsuario::getEdge(string edge) {
     cin>>max;
     cout<<"Enter "<<edge<<" Edge Min"<<"\n";
     cin>>min;
-    edgeNode<double> up(max,min);
+    EdgeNode<double> up(max,min);
     return up;
 }
 
-void InterfazUsuario::calcMat(anpi::Matrix<double> matA,liebmann<double> lieb) {
+void InterfazUsuario::calcMat(anpi::Matrix<double> matA,Liebmann<double> lieb) {
     double error(100);
     int option(0);
     cout<<"Enter a porcentage error higher than 0 and lower than 100"<<endl;
@@ -77,7 +77,7 @@ void InterfazUsuario::calcMat(anpi::Matrix<double> matA,liebmann<double> lieb) {
     }
 }
 
-void InterfazUsuario::graphMat(anpi::Matrix<double> matA,liebmann<double> lieb) {\
+void InterfazUsuario::graphMat(anpi::Matrix<double> matA,Liebmann<double> lieb) {\
     matA = lieb.generateFinalMat(matA);
     int option(0);
     plotpy::PlotQuiver<double> plt;

@@ -1,5 +1,5 @@
 //
-// Created by av10 on 09/11/17.
+// Created by estape11 on 03/06/18.
 //
 
 #ifndef ANPI_USERINTERFACE_H
@@ -12,9 +12,9 @@ public:
     void init();
 private:
     void setUpMat(int,int);
-    edgeNode<double> getEdge(std::string);
-    void calcMat(anpi::Matrix<double>,liebmann<double>);
-    void graphMat(anpi::Matrix<double>,liebmann<double>);
+    EdgeNode<double> getEdge(std::string);
+    void calcMat(anpi::Matrix<double>,Liebmann<double>);
+    void graphMat(anpi::Matrix<double>,Liebmann<double>);
 };
 
 

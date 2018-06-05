@@ -120,7 +120,7 @@ void Liebmann<T>::setUpEdge(int size, anpi::Matrix<T> &mat) {
 template<typename T>
 void Liebmann<T>::setDownEdge(int size, int rows, anpi::Matrix<T> &mat) {
     T sum = botEdge.getTempDif(size - 1);
-    int offset = (size - 1) * size;
+    //int offset = (size - 1) * size;
     for (int i = 0; i < size; ++i) {
         if (i == 0) {
             mat[rows - 1][i] = botEdge.getUp() + leftEdge.getLow();

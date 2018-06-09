@@ -64,6 +64,7 @@ int main(int argc, char **argv) {
                 b = false;
                 c = false;
                 d = false;
+                // chequea que tenga t, r, l o b
                 for (unsigned int i = 0; i < dato.size(); i++) {
                     if (dato[i] == 't' || dato[i] == 'b' || dato[i] == 'l' || dato[i] == 'r') {
                         if (dato[i] == 't') {
